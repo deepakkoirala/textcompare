@@ -3,7 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Text Compare</title>
+  <title>Text Compare – Free Online Diff Checker to Compare Two Texts</title>
+  <meta name="description" content="Compare two or three texts online and instantly see the differences. Free, private diff checker with line and word highlighting, side-by-side and unified views. Runs entirely in your browser." />
+  <link rel="canonical" href="https://txtcompare.vercel.app/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Social sharing previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Text Compare" />
+  <meta property="og:url" content="https://txtcompare.vercel.app/" />
+  <meta property="og:title" content="Text Compare – Free Online Diff Checker" />
+  <meta property="og:description" content="Compare texts and see line and word level differences instantly. Private: your text never leaves your browser." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Text Compare – Free Online Diff Checker" />
+  <meta name="twitter:description" content="Compare texts and see line and word level differences instantly. Private: your text never leaves your browser." />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Text Compare",
+        "url": "https://txtcompare.vercel.app/",
+        "description": "Free online diff checker to compare two or three texts with line and word level highlighting. Runs entirely in the browser.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "license": "https://opensource.org/licenses/MIT",
+        "codeRepository": "https://github.com/deepakkoirala/textcompare"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my text uploaded anywhere?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. The comparison runs entirely in your browser. Your text is never sent to or stored on a server." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I compare more than two texts?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Add a third text and Text Compare shows the differences between each pair." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I ignore whitespace or letter case?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Turn on Ignore whitespace or Ignore case to skip differences that only come from spacing or capitalization." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Text Compare free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is free and open source under the MIT License, with no sign-up required." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Tailwind CSS v4 (browser build) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -234,6 +296,33 @@
           </div>
         </div>
       </template>
+    </section>
+
+    <!-- About / FAQ (helps visitors and search engines understand the tool) -->
+    <section class="mt-12 grid gap-8 text-sm text-gray-600 md:grid-cols-2 dark:text-gray-400">
+      <div>
+        <h2 class="mb-2 text-base font-semibold text-gray-900 dark:text-gray-100">Free online text compare and diff checker</h2>
+        <p class="mb-3">Text Compare finds the differences between two or three pieces of text. Paste or open your text, press <strong>Compare</strong>, and see added, removed and modified lines highlighted, with the exact changed words marked inside each line.</p>
+        <ul class="list-disc space-y-1 pl-5">
+          <li>Side-by-side and unified diff views</li>
+          <li>Line and word level highlighting</li>
+          <li>Compare up to three texts at once</li>
+          <li>Ignore whitespace or letter case</li>
+          <li>Hide unchanged lines to focus on the changes</li>
+          <li>Open text files, code, JSON, CSV, Markdown and more</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mb-2 text-base font-semibold text-gray-900 dark:text-gray-100">Frequently asked questions</h2>
+        <h3 class="font-medium text-gray-800 dark:text-gray-200">Is my text uploaded anywhere?</h3>
+        <p class="mb-3">No. The comparison runs entirely in your browser. Your text is never sent to or stored on a server.</p>
+        <h3 class="font-medium text-gray-800 dark:text-gray-200">Can I compare more than two texts?</h3>
+        <p class="mb-3">Yes. Add a third text and Text Compare shows the differences between each pair.</p>
+        <h3 class="font-medium text-gray-800 dark:text-gray-200">Can I ignore whitespace or letter case?</h3>
+        <p class="mb-3">Yes. Turn on Ignore whitespace or Ignore case to skip differences that only come from spacing or capitalization.</p>
+        <h3 class="font-medium text-gray-800 dark:text-gray-200">Is Text Compare free?</h3>
+        <p>Yes. It is free and open source under the MIT License, with no sign-up required.</p>
+      </div>
     </section>
 
     <!-- Footer / privacy note -->
