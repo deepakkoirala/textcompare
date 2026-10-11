@@ -48,3 +48,7 @@ npm i -g vercel
 vercel          # preview
 vercel --prod   # production
 ```
+
+## License
+
+Text Compare is open source under the [MIT License](LICENSE).

@@ -222,9 +222,28 @@ document.addEventListener('alpine:init', () => {
     results: [],
     activePair: 0,
     error: '',
+    theme: 'auto', // 'light' | 'dark' | 'auto'
 
     init() {
       this.$watch('options', () => { if (this.results.length) this.compare(false); });
+
+      try { this.theme = localStorage.getItem('theme') || 'auto'; } catch {}
+      if (!['light', 'dark', 'auto'].includes(this.theme)) this.theme = 'auto';
+      // In auto mode, follow the OS setting when it changes
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => this.applyTheme());
+      this.applyTheme();
+    },
+
+    setTheme(theme) {
+      this.theme = theme;
+      try { localStorage.setItem('theme', theme); } catch {}
+      this.applyTheme();
+    },
+
+    applyTheme() {
+      const dark = this.theme === 'dark' || (this.theme === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+      document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
     },
 
     get hasThird() { return this.texts.length === 3; },
