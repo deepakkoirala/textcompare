@@ -223,6 +223,7 @@ document.addEventListener('alpine:init', () => {
     activePair: 0,
     error: '',
     theme: 'auto', // 'light' | 'dark' | 'auto'
+    showAbout: false, // About / FAQ panel, collapsed by default
 
     init() {
       this.$watch('options', () => { if (this.results.length) this.compare(false); });

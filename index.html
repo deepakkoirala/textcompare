@@ -304,8 +304,14 @@
       </template>
     </section>
 
-    <!-- About / FAQ (helps visitors and search engines understand the tool) -->
-    <section class="mt-12 grid gap-8 text-sm text-gray-600 md:grid-cols-2 dark:text-gray-400">
+    <!-- About / FAQ (helps visitors and search engines understand the tool).
+         Collapsible; the content stays in the HTML for search engines even when hidden. -->
+    <button @click="showAbout = !showAbout" :aria-expanded="showAbout" aria-controls="about"
+            class="mt-12 flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+      <svg class="size-4 transition-transform" :class="showAbout && 'rotate-90'" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.17 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02z" clip-rule="evenodd"/></svg>
+      About &amp; FAQ
+    </button>
+    <section id="about" x-show="showAbout" class="mt-4 grid gap-8 text-sm text-gray-600 md:grid-cols-2 dark:text-gray-400">
       <div>
         <h2 class="mb-2 text-base font-semibold text-gray-900 dark:text-gray-100">Free online text compare and diff checker</h2>
         <p class="mb-3">Text Compare finds the differences between two or three pieces of text. Paste or open your text, press <strong>Compare</strong>, and see added, removed and modified lines highlighted, with the exact changed words marked inside each line.</p>
