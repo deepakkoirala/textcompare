@@ -33,6 +33,14 @@ jobs:
             echo "PROD_FLAG=--prod" >> "$GITHUB_ENV"
           fi
 
+      - name: Stamp build info into the page
+        run: |
+          sed -i \
+            -e "s/__BUILD_NUMBER__/${GITHUB_RUN_NUMBER}/g" \
+            -e "s/__BUILD_RUN_ID__/${GITHUB_RUN_ID}/g" \
+            -e "s/__BUILD_SHA__/${GITHUB_SHA::7}/g" \
+            index.html
+
       - name: Pull Vercel project settings
         run: vercel pull --yes --environment=$VERCEL_ENV --token=${{ secrets.VERCEL_TOKEN }}
 

@@ -337,6 +337,20 @@
       The code is open source and can be viewed on
       <a href="https://github.com/deepakkoirala/textcompare/tree/main" target="_blank" rel="noopener noreferrer"
          class="underline underline-offset-2 hover:text-gray-900 dark:hover:text-gray-100">GitHub</a>.
+      <div class="mt-3 flex items-center justify-center gap-3">
+        <!-- Live status of the latest deploy workflow run on main -->
+        <a href="https://github.com/deepakkoirala/textcompare/actions/workflows/deploy.yml" target="_blank" rel="noopener noreferrer"
+           title="Latest build status on GitHub Actions">
+          <img src="https://github.com/deepakkoirala/textcompare/actions/workflows/deploy.yml/badge.svg?branch=main"
+               alt="Build status" height="20" loading="lazy" />
+        </a>
+        <!-- Build that produced this deployment; the deploy workflow replaces the __BUILD_*__ placeholders.
+             Hidden when the placeholders are still there (e.g. running locally). -->
+        <a x-show="!'__BUILD_NUMBER__'.startsWith('__')"
+           href="https://github.com/deepakkoirala/textcompare/actions/runs/__BUILD_RUN_ID__" target="_blank" rel="noopener noreferrer"
+           class="font-mono underline underline-offset-2 hover:text-gray-900 dark:hover:text-gray-100"
+           title="GitHub Actions run that built this deployment">build #__BUILD_NUMBER__ · __BUILD_SHA__</a>
+      </div>
     </footer>
 
   </div>
