@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://txtcompare.vercel.app/sitemap.xml
+Sitemap: https://www.qwi.li/sitemap.xml

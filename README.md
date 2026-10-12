@@ -2,7 +2,7 @@
 
 A browser-based tool for comparing two or three blocks of text. Paste text into each panel and hit **Compare** (or press `Ctrl/⌘ + Enter`). Line-level and word-level differences are highlighted.
 
-**Live app:** https://txtcompare.vercel.app/
+**Live app:** https://www.qwi.li/
 
 ## Features
 
@@ -29,7 +29,7 @@ The app is hosted on [Vercel](https://vercel.com) and deployed by the GitHub Act
 
 | Trigger                | Result                                                       |
 | ---------------------- | ------------------------------------------------------------ |
-| Push to `main`         | Production deploy to https://txtcompare.vercel.app/          |
+| Push to `main`         | Production deploy to https://www.qwi.li/          |
 | Pull request to `main` | Preview deploy; the preview URL is posted as a PR comment    |
 | Manual run             | Production deploy (Actions tab → *Deploy to Vercel* → *Run workflow*) |
 
